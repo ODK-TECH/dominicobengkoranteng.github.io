@@ -3,46 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My GitHub Pages Site</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-            background-color: #f0f0f0;
-        }
-        h1 {
-            color: #333;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        #message {
-            margin-top: 20px;
-            font-size: 18px;
-            color: #444;
-        }
-    </style>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to My GitHub Pages Site</h1>
-    <p>This is a simple static website hosted on github.io.</p>
-    <button onclick="displayMessage()">Click Me!</button>
-    <div id="message"></div>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button onclick="toggleTheme()">Toggle Theme</button>
+    </header>
 
-    <script>
-        function displayMessage() {
-            document.getElementById('message').innerText = 'Hello, GitHub Pages!';
-        }
-    </script>
+    <section id="home">
+        <h2>Welcome to My Portfolio</h2>
+        <p>I’m a data science and machine learning enthusiast, dedicated to solving real-world challenges through innovative research. Currently, my work focuses on education and agriculture, leveraging advanced analytics to drive impact in Africa. Explore my projects below.</p>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Modelling Mathematics Performance</h3>
+                <p>Developed a supervised machine learning model to predict mathematics performance of Ghanaian junior high school students, using a dataset of 364 observations. Implemented in Python with scikit-learn under the supervision of Dr. Bright Emmanuel Owusu at AIMS Ghana. The project addressed educational outcomes and informed teaching strategies.</p>
+                <a href="https://github.com/username/thesis" target="_blank">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>AI-Powered Poultry Monitoring System</h3>
+                <p> We're designing an AI-based system using YOLOv8 and IoT sensors to detect early signs of Newcastle Disease in poultry farms. Developed for the InnovAIMS Bootcamp, where my team (DPB) won first place and 20,000 cedis for prototyping. The system aims to reduce mortality rates among smallholder farmers in Ghana.</p>
+                <a href="https://github.com/username/poultry-monitoring" target="_blank">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Data Analysis Toolkit</h3>
+                <p>Created a toolkit for analyzing educational and agricultural datasets, integrating Python, R, and visualization tools like D3.js. This project supports data-driven decision-making for stakeholders in education and farming.</p>
+                <a href="https://github.com/username/data-toolkit" target="_blank">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Connect with me to discuss collaborations or learn more about my work:</p>
+        <ul class="social-links">
+            <li><a href="mailto:nanaobeng087@gmail.com @example.com">Email</a></li>
+            <li><a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/username" target="_blank">GitHub</a></li>
+            <li><a href="https://x.com/your-profile" target="_blank">Twitter/X</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2025 Dominic Obeng Koranteng. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
