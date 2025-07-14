@@ -1,3 +1,16 @@
+/* Import Google Fonts for a unique typography */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;600&display=swap');
+
+/* Define custom theme variables */
+:root {
+    --primary-color: #e67e22; /* Terracotta orange, inspired by Ghanaian kente */
+    --secondary-color: #2e7d32; /* Savanna green, evoking agriculture */
+    --background-color: #fdf6e3; /* Light cream, warm and clean */
+    --text-color: #3c2f2f; /* Deep brown for readability */
+    --accent-color: #f1c40f; /* Vibrant yellow for highlights */
+    --card-bg: #ffffff; /* White for project cards */
+}
+
 /* Reset default margins and padding */
 * {
     margin: 0;
@@ -7,88 +20,226 @@
 
 /* Body styling */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f9;
-    color: #333;
-    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Header styling */
-h1 {
-    font-size: 2.5rem;
-    color: #1a3c6d;
+header {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-family: 'Lora', serif;
+    font-size: 2.8rem;
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
-/* Paragraph styling */
-p {
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 700;
     font-size: 1.1rem;
-    max-width: 600px;
-    margin-bottom: 1.5rem;
-    text-align: center;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent-color);
 }
 
 /* Button styling */
 button {
     padding: 12px 24px;
+    font-family: 'Roboto', sans-serif;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 700;
     color: #fff;
-    background-color: #007bff;
+    background-color: var(--primary-color);
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    margin: 0.5rem;
+    margin-top: 1rem;
 }
 
 button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
 }
 
 button:active {
     transform: translateY(0);
 }
 
-/* Message div styling */
-#message {
-    margin-top: 1.5rem;
-    font-size: 1.2rem;
-    color: #2e7d32;
+/* Section styling */
+section {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section h2 {
+    font-family: 'Lora', serif;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+section p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+}
+
+/* Project grid with animation */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, opacity 0.5s ease;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-card h3 {
+    font-family: 'Lora', serif;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.project-card a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+    color: var(--accent-color);
+}
+
+/* Contact section */
+.social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1.1rem;
     font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--card-bg);
+    margin-top: 2rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.15);
 }
 
 /* Dark theme styling */
 body.dark-theme {
-    background-color: #1e1e2f;
-    color: #e0e0e0;
+    --background-color: #2c2c44;
+    --text-color: #e0e0e0;
+    --card-bg: #3a3a5c;
 }
 
-body.dark-theme h1 {
-    color: #4a90e2;
+body.dark-theme header,
+body.dark-theme footer {
+    background-color: var(--card-bg);
 }
 
-body.dark-theme #message {
-    color: #66bb6a;
+body.dark-theme h1,
+body.dark-theme h2 {
+    color: var(--accent-color);
+}
+
+body.dark-theme .project-card p {
+    color: #bbb;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive design */
 @media (max-width: 600px) {
-    h1 {
-        font-size: 1.8rem;
+    header h1 {
+        font-size: 2rem;
     }
 
-    p {
-        font-size: 1rem;
-        padding: 0 15px;
+    section h2 {
+        font-size: 1.6rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
     }
 
     button {
