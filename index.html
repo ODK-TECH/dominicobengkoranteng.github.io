@@ -1,82 +1,48 @@
-/* Reset default margins and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My GitHub Pages Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My GitHub Pages Site</h1>
+    <p>This is a simple static website hosted on github.io.</p>
+    <button onclick="displayMessage()">Click Me!</button>
+    <div id="message"></div>
 
-/* Body styling */
-body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f9;
-    color: #333;
-    padding: 20px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Header styling */
-h1 {
-    font-size: 2.5rem;
-    color: #1a3c6d;
-    margin-bottom: 1rem;
-}
-
-/* Paragraph styling */
-p {
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-/* Button styling */
-button {
-    padding: 12px 24px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
-}
-
-button:active {
-    transform: translateY(0);
-}
-
-/* Message div styling */
-#message {
-    margin-top: 1.5rem;
-    font-size: 1.2rem;
-    color: #2e7d32;
-    font-weight: 500;
-}
-
-/* Responsive design */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    p {
-        font-size: 1rem;
-        padding: 0 15px;
-    }
-
-    button {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-}
+    <script>
+        function displayMessage() {
+            document.getElementById('message').innerText = 'Hello, GitHub Pages!';
+        }
+    </script>
+</body>
+</html>
