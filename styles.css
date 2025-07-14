@@ -1,0 +1,98 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header styling */
+h1 {
+    font-size: 2.5rem;
+    color: #1a3c6d;
+    margin-bottom: 1rem;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Button styling */
+button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 0.5rem;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Message div styling */
+#message {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    color: #2e7d32;
+    font-weight: 500;
+}
+
+/* Dark theme styling */
+body.dark-theme {
+    background-color: #1e1e2f;
+    color: #e0e0e0;
+}
+
+body.dark-theme h1 {
+    color: #4a90e2;
+}
+
+body.dark-theme #message {
+    color: #66bb6a;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
